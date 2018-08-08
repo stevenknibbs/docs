@@ -114,7 +114,7 @@ This credential provider first checks in order:
 For information on the `Aws\Credentials` classes, see Amazon's ApiGen
 documentation for [AWS Credentials][s3-api-creds].
 
-If using an IAM policy, you'll need to attach the follwoing to the IAM user
+If using an IAM policy, you'll need to attach the following to the IAM user
 role:
 
 ```json
@@ -125,8 +125,9 @@ role:
             "Effect": "Allow",
             "Action": [
                 "s3:HeadBucket",
-                "s3:GetBucketAcl"
+                "s3:GetBucketAcl",
                 "s3:HeadObject",
+                "s3:ListObjects",
                 "s3:GetObject",
                 "s3:GetObjectAcl",
                 "s3:GetObjectVersion",
